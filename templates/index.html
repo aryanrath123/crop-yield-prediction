@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Yield Prediction</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <h1 class="text-center mb-4">Crop Yield Prediction</h1>
+      <div class="card shadow p-4">
+        <form id="predictionForm">
+          <div class="mb-3">
+            <label for="crop" class="form-label">Crop:</label>
+            <select id="crop" name="crop" class="form-select" required>
+              <option value="" disabled selected>Select a crop</option>
+              <option value="Cocoa">Cocoa</option>
+              <option value="Beans">Beans</option>
+              <option value="Oil palm fruit">Oil palm fruit</option>
+              <option value="Rice, paddy">Rice, paddy</option>
+              <option value="Rubber, natural">Rubber, natural</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="precipitation" class="form-label"
+              >Precipitation (mm/day):</label
+            >
+            <input
+              type="number"
+              id="precipitation"
+              name="precipitation"
+              class="form-control"
+              placeholder="Enter precipitation value"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="specific_humidity" class="form-label"
+              >Specific Humidity (g/kg):</label
+            >
+            <input
+              type="number"
+              id="specific_humidity"
+              name="specific_humidity"
+              class="form-control"
+              placeholder="Enter specific humidity value"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="relative_humidity" class="form-label"
+              >Relative Humidity (%):</label
+            >
+            <input
+              type="number"
+              id="relative_humidity"
+              name="relative_humidity"
+              class="form-control"
+              placeholder="Enter relative humidity value"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="temperature" class="form-label"
+              >Temperature (°C):</label
+            >
+            <input
+              type="number"
+              id="temperature"
+              name="temperature"
+              class="form-control"
+              placeholder="Enter temperature value"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">
+            Predict Yield
+          </button>
+        </form>
+        <div id="loading" class="text-center mt-3" style="display: none">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div id="result" class="alert alert-success mt-4 d-none"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/script.js"></script>
+  </body>
+</html>

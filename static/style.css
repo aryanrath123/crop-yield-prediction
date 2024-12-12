@@ -1,0 +1,105 @@
+body {
+  background-image: url("pexels-todd-trapani-488382-1382102.jpg"); /* Replace with your background image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+h1 {
+  color: #339933;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.form-label {
+  color: #339933;
+  font-weight: bold;
+}
+
+input,
+select {
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: #339933;
+  border-color: #339933;
+  font-size: 1rem;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2a822a;
+  transform: scale(1.02);
+}
+
+.alert {
+  font-size: 1.1rem;
+}
+
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    padding: 30px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  input,
+  select {
+    font-size: 0.9rem;
+  }
+  .btn-primary {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  input,
+  select {
+    font-size: 0.8rem;
+  }
+  .btn-primary {
+    font-size: 0.8rem;
+  }
+}
